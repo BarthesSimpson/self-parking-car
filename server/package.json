@@ -4,8 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test jest --verbose",
+    "test:watch": "NODE_ENV=test jest --verbose --watch"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "David Frenk",
+  "license": "ISC",
+  "jest": {
+    "moduleDirectories": ["test", "node_modules"]
+  },
+  "dependencies": {
+    "hapi": "^16.6.2",
+    "pg": "^7.4.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.22.8"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
 }
